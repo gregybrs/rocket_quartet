@@ -3,15 +3,27 @@
 
 }
 
+
+h1 {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 48px; 
+  margin-left: 2cm;
+  width: 80%; 
+  line-height: 1.4; 
+  color: #fff; 
+}
 body {
   margin: 0;
-  background-color: rgb(28, 0, 47);
-  /*space blue violet*/
-  font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
-  font-size: small;
+  background-color: rgb(17, 16, 17);
+  font-family: 'Roboto', sans-serif;
 }
 
-/*#wrapper {}*/
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
 
 .card {
   height: 400px;
@@ -19,6 +31,14 @@ body {
   background-color: rgb(252, 252, 226);
   border-radius: 15px;
   padding: 5px;
+  margin: 1cm;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
 }
 
 .card-content {
@@ -26,27 +46,76 @@ body {
   height: 100%;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr;
+
+
 }
+
 
 .card-title {
-  grid-column: span 3;
-}
-
-.rocket-image {
-  grid-column: span 4;
-  max-height: 170px;
-  max-width: 250px;
+  z-index: 10; 
+  font-size:x-large;
+  font-weight: bold;
+  width: 100%; 
+  padding-top: 10px;
   
 }
 
+.card-group {
+  font-size: smaller;
+  font-weight: 1 c00;
+}
+
+
+.rocket-image {
+  grid-column: span 4 ; 
+  display: flex;
+  justify-content: flex-start; 
+  overflow: hidden;
+  height: 210px; 
+  background-size: cover; 
+  background-position: center; 
+  color: white;
+  padding-left: 10px;
+}
+
 .rocket-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  max-width: 170px;
-  max-height: 250px;
+}
+
+.goal-icon {
+  grid-column: span 4;
+  text-align: left;
+  font-size: small;
+  font-weight: 400;
+  padding-left: 10px;
 }
 
 .rocket-info {
-  grid-column: span 3;
+  font-size: 90%;
+  grid-column: span 4;
+  padding-left: 10px;
+  font-size: small;
+  font-weight: 400;
+  
+}
+.stat-icon {
+  grid-column: span 1;
+  text-align: left;
+  font-size: small;
+  font-weight: 400;
+  padding-left: 10px;
+  line-height: 1.1;
+}
+
+.stat-value {
+  grid-column: span 1;
+  text-align: right;
+  text-align: end;
+  font-size: small;
+  font-weight: 500;
+  padding-right: 10px;
+  
+
 }
